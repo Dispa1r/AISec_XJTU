@@ -1,5 +1,7 @@
 # 该目录下是推荐给小组成员的阅读资料
-  (请各位成员根据自己的研究方向和兴趣点学习，:star:为推荐优先阅读的资料)
+  请各位成员根据自己的研究方向和兴趣点学习，:star:为推荐优先阅读的资料
+
+(注：在浏览这个列表之前，强烈推荐Philip Guo的博客[Opportunistic Paper Reading-A Practical Strategy for Reading Research Papers](http://pgbovine.net/opportunistic-paper-reading.htm)。本列表推荐文章和描述难免带有个人倾向，而且覆盖度远远不够。希望你能够以本列表为起点，去总结自己的reading list！:fist: -cyf）
 
 ## 1.对抗样本攻/防
 （对抗样本攻/防方向对应的文章很多，该列表覆盖内容极其有限）
@@ -128,6 +130,7 @@
 
    提出的攻击方法，对ICLR 2018年7篇基于梯度混淆方法中，6篇被完全攻破，1篇被部分攻破
    
+
 (可以看到基本所有的防御方法都可以被另一种的新的攻击方法攻破，这就是adaptive attacker的假设，该部分内容推荐学习"On Evaluating Adversarial Robustness" :thinking:)
 
 ### 攻防测试
@@ -198,6 +201,78 @@
 1. [LEMNA: Explaining Deep Learning based Security Applications (CCS '18)](http://people.cs.vt.edu/gangwang/ccs18.pdf)
 
    基于模型可解释性的安全分析
+      
+1. [An Empirical Study of Example Forgetting during Deep Neural Network Learning](https://openreview.net/forum?id=BJlxm30cKm) - ICLR 2019
+
+   * Aiming to understand whether a phenomenon related to "catastrophic forgetting" occurs when data does not undergo a clear distributional shift.
+   * The result supports recent research interpreting deep neural networks as **max margin classifiers** in the linear case.
+
+1. [Understanding black-box predictions via influence functions](http://proceedings.mlr.press/v70/koh17a/koh17a.pdf) :star: - ICLR 2017
+
+   * Using **influence functions** from robust statistics to explain the predictions of black-box models. (This paper inspires a lot of work using influence functions as tools for model explanation.)
+
+1. [A comprehensive, application-oriented study of catastrophic forgetting in DNN](https://openreview.net/forum?id=BkloRs0qK7) - ICLR 2019 
+
+1. [On the Accuracy of Influence Functions for Measuring Group Effects](https://papers.nips.cc/paper/8767-on-the-accuracy-of-influence-functions-for-measuring-group-effects)
+
+1. [Deliberative Explanations: visualizing network insecurities](https://papers.nips.cc/paper/9211-cxplain-causal-explanations-for-model-interpretation-under-uncertainty) - NeurIPS 2019
+
+   * The proposed implementation combines attributions with respect to both class predictions and a difficulty score.
+
+1. [Detecting Overfitting via Adversarial Examples](https://papers.nips.cc/paper/9000-detecting-overfitting-via-adversarial-examples) -NeurIPS 2019
+
+   * Current performance improvement process may naturally **lead to models overfitted to the test set.**  -> The proposed method uses **only the original test data** to detect overfitting.
+
+1. [A Meta-Analysis of Overfitting in Machine Learning](https://papers.nips.cc/paper/9117-a-meta-analysis-of-overfitting-in-machine-learning)
+
+1. [Understanding deep learning requires re-thinking generalization](https://openreview.net/forum?id=Sy8gdB9xx) (This work has raised a debate. It receives totally different opinions: "groundbreaking", "very disappointing", "not useful"...)
+
+   * **Central finding** of this paper: *Deep neural networks easily fit random labels*
+
+1. [The Implicit Bias of Gradient Descent on Separable Data](https://openreview.net/forum?id=r1q7n9gAb) - ICLR 2018 :star: ​
+
+   * This paper shows that gradient descent on an unregularized logistic regression problem, for almost all separable datasets, converges to  the same direction as the **max-margin solution**. (to the solution of the hard margin SVM) -> Inpsiring the "Support Vectors" explanations
+
+1. [Machine Unlearning](https://arxiv.org/abs/1912.03817)
+
+1. [A Closer Look at Memorization in Deep Networks](https://arxiv.org/abs/1706.05394)
+
+1. [A Survey of Methods For Explaining Black Box Models](https://dl.acm.org/citation.cfm?id=3236009)
+
+1. [Shapley Homology: Topological Analysis of Sample Influence for Neural Networks](https://arxiv.org/pdf/1910.06509.pdf)
+
+1. [Distribution Density, Tails, and Outliers in Machine Learning: Metrics and Applications](https://arxiv.org/pdf/1910.13427.pdf)
+
+1. [An Empirical and Comparative Analysis of Data Valuation with Scalable Algorithms](https://arxiv.org/pdf/1911.07128.pdf) :star:
+
+   * Core: **Approximating the model by a KNN classifier** that can lead to efficient Shapley value calculation for data valuation.
+   * This paper formalizes two performance metrics: whether it is indicative of training point's contribution to some random set; data valuation for privacy-preserving models (usability for differential privacy algorithms).
+   * The proposed algorithm is shown to applied to a wide range of tasks, such as label noise corrections, watermark detection, data summarization, active data acquisition and domain adaption. (Does this conclusion help you inspire some new ideas on your current work?)
+
+1. [“Why Should I Trust You?” Explaining the Predictions of Any Classifier](https://dl.acm.org/citation.cfm?id=2939778) - KDD '16:star: 
+
+   * This paper proposes LIME, which explains the predictions of any classifier by *learning* an interpretable model locally around the predictions, addressing the "trust the prediction" problem. (LIME: *Local Interpretable Model-agnostic Explanations*) -> Linear approximation within a neighbor area.
+   * This paper proposes SP-LIME, which address the "trusting the model" problem.
+   * "Desired characteristics for explainers": interpretable, local fidelity, model-agnostic (works for *any* model), and providing a global perspective. 
+
+1. [Can I Trust the Explainer? Verifying Post-hoc Explanatory Methods](https://arxiv.org/abs/1910.02065)
+
+   * *Feature-additivity* (-> [some are given by Shapley value](https://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions)) and *feature-selection* perspectives on explanations lead to fundamentally different instance-wise explanations.
+
+   * Current post-hoc explainers are either validated on simplistic scenarios or under the assumption that the learned models behave reasonably.
+
+     (This work is currently [under the review of ICLR 2020](https://openreview.net/forum?id=S1e-0kBYPB))
+
+1. [One Explanation Does Not Fit All: A Toolkit and Taxonomy of AI Explainability Techniques](https://arxiv.org/abs/1909.03012) - [IBM AI Explainability 360 Toolkit](https://github.com/IBM/AIX360/) :star::star:
+
+   * AI Explanability 360 - An open-source software toolkit featuring eight explainability methods and two evaluation metrics (*Faithfulness* and *Monotonicity*)
+   * *No single approach to explainable AI that always works best*: Different settings may require different kinds of explanations. :exclamation:
+
+1. [Influence-Directed Explanations for Deep Convolutional Networks](https://arxiv.org/abs/1802.03788)
+
+   * This paper introduces a distributional influences measure -> Rather than previous methods relating instance-specific features to instance-specific predictions, the proposed method allows to identify which neurons are most influential in determining the model's behavior **on a given distribution of instances**. ([Rejected by ICLR 2018](https://openreview.net/forum?id=SJPpHzW0-), since the novelty is not highlighted enough.)
+
+1. [A Unified Approach to Interpreting Model Predictions](https://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions) -NIPS 2017 :star:
 
 ## 3.模型/数据隐私
 
