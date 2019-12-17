@@ -201,14 +201,14 @@
 1. [LEMNA: Explaining Deep Learning based Security Applications (CCS '18)](http://people.cs.vt.edu/gangwang/ccs18.pdf)
 
    基于模型可解释性的安全分析
-      
-
+   
 1. [Understanding black-box predictions via influence functions](http://proceedings.mlr.press/v70/koh17a/koh17a.pdf) :star: - ICLR 2017
 
    * Using **influence functions** from robust statistics to explain the predictions of black-box models. (This paper inspires a lot of work using influence functions as tools for model explanation.)
 
+1. [On the Accuracy of Influence Functions for Measuring Group Effects](https://papers.nips.cc/paper/8767-on-the-accuracy-of-influence-functions-for-measuring-group-effects) - NeurIPS 2019
 
-1. [On the Accuracy of Influence Functions for Measuring Group Effects](https://papers.nips.cc/paper/8767-on-the-accuracy-of-influence-functions-for-measuring-group-effects)
+   * This paper is written by Pang Wei Koh et al., which examines the accuracy of influence functions for measuring large data groups.
 
 1. [Deliberative Explanations: visualizing network insecurities](https://papers.nips.cc/paper/9211-cxplain-causal-explanations-for-model-interpretation-under-uncertainty) - NeurIPS 2019
 
@@ -218,7 +218,9 @@
 
    * Current performance improvement process may naturally **lead to models overfitted to the test set.**  -> The proposed method uses **only the original test data** to detect overfitting.
 
-1. [A Meta-Analysis of Overfitting in Machine Learning](https://papers.nips.cc/paper/9117-a-meta-analysis-of-overfitting-in-machine-learning)
+1. [A Meta-Analysis of Overfitting in Machine Learning](https://papers.nips.cc/paper/9117-a-meta-analysis-of-overfitting-in-machine-learning) - NeurIPS 2019
+
+   * This paper focuses on *adaptive overfitting* cause by test set reuse. This study examines over one hundred machine learning competitions hosted on the Kaggle, and surprisingly it shows little evidence of substantial overfitting.
 
 1. [Understanding deep learning requires re-thinking generalization](https://openreview.net/forum?id=Sy8gdB9xx) (This work has raised a debate. It receives totally different opinions: "groundbreaking", "very disappointing", "not useful"...)
 
@@ -228,12 +230,18 @@
 
    * This paper shows that gradient descent on an unregularized logistic regression problem, for almost all separable datasets, converges to  the same direction as the **max-margin solution**. (to the solution of the hard margin SVM) -> Inpsiring the "Support Vectors" explanations
 
-
 1. [A Survey of Methods For Explaining Black Box Models](https://dl.acm.org/citation.cfm?id=3236009)
+
+   * Summarizing methods for explaining black box models by 2018 (As this paper was published in 2018).
 
 1. [Shapley Homology: Topological Analysis of Sample Influence for Neural Networks](https://arxiv.org/pdf/1910.06509.pdf)
 
-1. [Distribution Density, Tails, and Outliers in Machine Learning: Metrics and Applications](https://arxiv.org/pdf/1910.13427.pdf)
+   * This paper studies the intrinsic properties of data, which performs both analytical and empirical studies on several data sets from two kinds of structured data -- *graphs* and *strings*.
+
+1. [Distribution Density, Tails, and Outliers in Machine Learning: Metrics and Applications](https://arxiv.org/pdf/1910.13427.pdf) :star: :star:
+
+   * This paper develops techniques to quantify the degree to which a given examples is an outlier in the underlying distribution.
+   * This work studies the interplay between five metrics based on *adversarial robustness*, *retraining stability*, *ensemble agreement*, and *differentially-private learning*.
 
 1. [An Empirical and Comparative Analysis of Data Valuation with Scalable Algorithms](https://arxiv.org/pdf/1911.07128.pdf) :star:
 
@@ -266,22 +274,27 @@
 
 1. [A Unified Approach to Interpreting Model Predictions](https://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions) -NIPS 2017 :star:
 
+   * This paper presents a unified framework for interpreting predictions -- SHAP.
+   * Model explanation:
+     * Simple model: "*The best explanation of a simple model is the model itself*."
+     * Complex model: Find a *simpler* explanation model.
+
 ## 3.模型/数据隐私
 
-* __Model Inversion__: 窃取隐私数据
-* __Model Extraction__: 窃取模型参数
+* ~~__Model Inversion__: 窃取隐私数据~~
+* ~~__Model Extraction__: 窃取模型参数~~
 
 1. [Model Inversion Attacks that Exploit Confidence Information and Basic Countermeasures (CCS '15)](https://www.cs.cmu.edu/~mfredrik/papers/fjr2015ccs.pdf) :star:
 
    展示了如何推测用户隐私信息(decision tree)，复原人脸训练数据(neural network)
 
-1. [Membership Inference Attacks Against Machine Learning Models (IEEE S&P '17)](https://www.cs.cornell.edu/~shmat/shmat_oak17.pdf) :star:
+1. ~~[Membership Inference Attacks Against Machine Learning Models (IEEE S&P '17)](https://www.cs.cornell.edu/~shmat/shmat_oak17.pdf) :star:~~
 
-   利用训练一系列shadow model进行成员推测攻击(Membership Inference Attack)
+   ~~利用训练一系列shadow model进行成员推测攻击(Membership Inference Attack)~~
 
-1. [ML-Leaks: Model and Data Independent Membership Inference Attacks and Defenses on Machine Learning Models (NDSS '19)](https://arxiv.org/pdf/1806.01246.pdf)
+1. ~~[ML-Leaks: Model and Data Independent Membership Inference Attacks and Defenses on Machine Learning Models (NDSS '19)](https://arxiv.org/pdf/1806.01246.pdf)~~
 
-   放松了之前文章中的两个关键假设：拥有shadow models以及与目标模型训练数据同分布的数据集，提出了跨域攻击
+   ~~放松了之前文章中的两个关键假设：拥有shadow models以及与目标模型训练数据同分布的数据集，提出了跨域攻击~~
 
 1. [Stealing Machine Learning Models via Prediction APIs (USENIX Security '16)](https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_tramer.pdf) :star:
 
@@ -298,6 +311,35 @@
 1. [How You Act Tells a Lot: Privacy-Leaking Attack on Deep Reinforcement Learning (AAMAS '19)](https://dl.acm.org/citation.cfm?id=3331715)
 
    针对强化学习模型的隐私窃取
+   
+### Membership Inference Attack
+
+1. [Membership inference attacks against machine learning models](https://ieeexplore.ieee.org/abstract/document/7958568)
+1. [LOGAN: Membership inference attacks against generative models](https://content.sciendo.com/view/journals/popets/2019/1/article-p133.xml)
+1. [Towards demystifying membership inference attacks](https://arxiv.org/abs/1807.09173)
+1. [Membership Inference Attack against Differentially Private Deep Learning Model](http://www.tdp.cat/issues16/tdp.a289a17.pdf)
+1. [Updates-Leak: Data Set Inference and Reconstruction Attacks in Online Learning](https://arxiv.org/abs/1904.01067)
+1. [Privacy Risk in Machine Learning: Analyzing the Connection to Overfitting](https://arxiv.org/abs/1709.01604)
+1. [Auditing Data Provenance in Text-Generation Models](https://arxiv.org/abs/1811.00513)
+1. [ML-Leaks: Model and Data Independent Membership Inference Attacks and Defenses on Machine Learning Models](https://arxiv.org/abs/1806.01246)
+1. [Comprehensive Privacy Analysis of Deep Learning: Stand-alone and Federated Learning under Passive and Active White-box Inference Attacks](https://arxiv.org/abs/1812.00910)
+1. [Machine Learning with Membership Privacy using Adversarial Regularization](https://arxiv.org/abs/1807.05852)
+1. [Understanding Membership Inferences on Well-Generalized Learning Models](https://arxiv.org/abs/1802.04889)
+1. [Towards Measuring Membership Privacy](https://arxiv.org/abs/1712.09136)
+1. [Membership Encoding for Deep Learning](https://arxiv.org/abs/1909.12982)
+1. [Privacy Risks of Explaining Machine Learning Models](https://arxiv.org/abs/1907.00164)
+1. [Ultimate Power of Inference Attacks: Privacy Risks of Learning High-Dimensional Graphical Models](https://arxiv.org/abs/1905.12774)
+1. [GAN-Leaks: A Taxonomy of Membership Inference Attacks against GANs](https://arxiv.org/abs/1909.03935)
+1. [Privacy Leakage Avoidance with Switching Ensembles](https://arxiv.org/abs/1911.07921)
+1. [Membership Inference Attacks Against Adversarially Robust Deep Learning Models](https://ieeexplore.ieee.org/abstract/document/8844607)
+1. [Stolen Memories: Leveraging Model Memorization for Calibrated White-Box Membership Inference](https://arxiv.org/abs/1906.11798)
+1. [Privacy Risks of Securing Machine Learning Models against Adversarial Examples](https://arxiv.org/abs/1905.10291)
+1. [Effects of Differential Privacy and Data Skewness on Membership Inference Vulnerability](https://arxiv.org/abs/1911.09777)
+1. [Neural Network Inversion in Adversarial Setting via Background Knowledge Alignment](https://dl.acm.org/citation.cfm?id=3354261)
+1. [Model Inversion Attacks Against Collaborative Inference](https://www.ntu.edu.sg/home/tianwei.zhang/paper/acsac19.pdf)
+1. [Characterizing Membership Privacy in Stochastic Gradient Langevin Dynamics](https://arxiv.org/pdf/1910.02249.pdf) :star:
+1. [Defending against Machine Learning based Inference Attacks via Adversarial Examples: Opportunities and Challenges](https://arxiv.org/abs/1909.08526)
+
 
 ## 4.模型水印/后门
 
@@ -546,8 +588,20 @@ __基于软键盘/虚拟键盘__
    * Aiming to understand whether a phenomenon related to "catastrophic forgetting" occurs when data does not undergo a clear distributional shift.
    * The result supports recent research interpreting deep neural networks as **max margin classifiers** in the linear case.
 
-1. [A comprehensive, application-oriented study of catastrophic forgetting in DNN](https://openreview.net/forum?id=BkloRs0qK7) - ICLR 2019 
+1. [Machine Unlearning](https://arxiv.org/abs/1912.03817) :star:
 
-1. [Machine Unlearning](https://arxiv.org/abs/1912.03817)
+   * The propose framework SISA training reduces the computational overhead by decreasing the number of model parameters affected by an unlearning request.
 
-1. [A Closer Look at Memorization in Deep Networks](https://arxiv.org/abs/1706.05394)
+1. [Towards Making Systems Forget with Machine Unlearning](https://ieeexplore.ieee.org/document/7163042) - IEEE S&P '15 :star:
+
+   * This proposes the concept of forgetting  system regarding privacy and security.
+
+1. [A Closer Look at Memorization in Deep Networks](https://arxiv.org/abs/1706.05394) - ICML 2017
+
+   * "Memorization: *the behavior exhibited by DNNs trained on noise*."
+
+   * "Deep networks tends to prioritize learning simple patterns first."
+
+   * "Training data itself plays an important role in determining the degree of memorization."
+
+     （This work follows the work by [Zhang et al. (2017)](https://openreview.net/forum?id=Sy8gdB9xx))
