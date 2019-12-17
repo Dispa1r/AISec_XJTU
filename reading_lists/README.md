@@ -202,16 +202,11 @@
 
    基于模型可解释性的安全分析
       
-1. [An Empirical Study of Example Forgetting during Deep Neural Network Learning](https://openreview.net/forum?id=BJlxm30cKm) - ICLR 2019
-
-   * Aiming to understand whether a phenomenon related to "catastrophic forgetting" occurs when data does not undergo a clear distributional shift.
-   * The result supports recent research interpreting deep neural networks as **max margin classifiers** in the linear case.
 
 1. [Understanding black-box predictions via influence functions](http://proceedings.mlr.press/v70/koh17a/koh17a.pdf) :star: - ICLR 2017
 
    * Using **influence functions** from robust statistics to explain the predictions of black-box models. (This paper inspires a lot of work using influence functions as tools for model explanation.)
 
-1. [A comprehensive, application-oriented study of catastrophic forgetting in DNN](https://openreview.net/forum?id=BkloRs0qK7) - ICLR 2019 
 
 1. [On the Accuracy of Influence Functions for Measuring Group Effects](https://papers.nips.cc/paper/8767-on-the-accuracy-of-influence-functions-for-measuring-group-effects)
 
@@ -233,9 +228,6 @@
 
    * This paper shows that gradient descent on an unregularized logistic regression problem, for almost all separable datasets, converges to  the same direction as the **max-margin solution**. (to the solution of the hard margin SVM) -> Inpsiring the "Support Vectors" explanations
 
-1. [Machine Unlearning](https://arxiv.org/abs/1912.03817)
-
-1. [A Closer Look at Memorization in Deep Networks](https://arxiv.org/abs/1706.05394)
 
 1. [A Survey of Methods For Explaining Black Box Models](https://dl.acm.org/citation.cfm?id=3236009)
 
@@ -547,3 +539,15 @@ __基于软键盘/虚拟键盘__
 1. [IEEE's Signal Processing Society - Camera Model Identification](https://www.kaggle.com/c/sp-society-camera-model-identification/)
 
     kaggle上的相机型号识别竞赛, 提供了约11GB的数据集
+    
+## 10. “记忆” 与 “遗忘”
+1. [An Empirical Study of Example Forgetting during Deep Neural Network Learning](https://openreview.net/forum?id=BJlxm30cKm) - ICLR 2019
+
+   * Aiming to understand whether a phenomenon related to "catastrophic forgetting" occurs when data does not undergo a clear distributional shift.
+   * The result supports recent research interpreting deep neural networks as **max margin classifiers** in the linear case.
+
+1. [A comprehensive, application-oriented study of catastrophic forgetting in DNN](https://openreview.net/forum?id=BkloRs0qK7) - ICLR 2019 
+
+1. [Machine Unlearning](https://arxiv.org/abs/1912.03817)
+
+1. [A Closer Look at Memorization in Deep Networks](https://arxiv.org/abs/1706.05394)
