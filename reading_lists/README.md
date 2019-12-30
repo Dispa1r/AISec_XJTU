@@ -1,7 +1,7 @@
 # 该目录下是推荐给小组成员的阅读资料
   请各位成员根据自己的研究方向和兴趣点学习，:star:为推荐优先阅读的资料
 
-(注：在浏览这个列表之前，强烈推荐Philip Guo的博客[Opportunistic Paper Reading-A Practical Strategy for Reading Research Papers](http://pgbovine.net/opportunistic-paper-reading.htm)。本列表推荐文章和描述难免带有个人倾向，而且覆盖度远远不够。希望你能够以本列表为起点，去总结自己的reading list！:fist: -cyf）
+(注：在浏览这个列表之前，强烈推荐Philip Guo的博客[Opportunistic Paper Reading-A Practical Strategy for Reading Research Papers](http://pgbovine.net/opportunistic-paper-reading.htm)，以及[How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf) by S. Keshav。本列表推荐文章和描述难免带有个人倾向，而且覆盖度远远不够。希望你能够以本列表为起点，去总结自己的reading list！:fist: -cyf）
 
 ## 1.对抗样本攻/防
 （对抗样本攻/防方向对应的文章很多，该列表覆盖内容极其有限）
@@ -440,7 +440,7 @@
 
 ## 7.样本生成/检测
 1. [Generative Adversarial Nets](http://202.117.4.101/cache/1/03/papers.nips.cc/c9eaa01bb80324b24e05e5a696fa4ab0/5423-generative-adversarial-nets.pdf) :star:
-   
+  
    Goodfellow等提出的GAN模型 
 
 1. [生成式对抗网络GAN的研究进展与展望](http://www.aas.net.cn/CN/abstract/abstract19012.shtml)
@@ -532,7 +532,7 @@ __基于软键盘/虚拟键盘__
 1. [Touch-interaction behavior for continuous user authentication on smartphones](https://ieeexplore.ieee.org/abstract/document/7139046)
 
 1. [TouchIn: Sightless two-factor authentication on multi-touch mobile devices](https://ieeexplore.ieee.org/document/6997513)
-   
+  
 
 ### Motion Sensor
 ### Touchscreen
