@@ -314,20 +314,34 @@
    
 ### Membership Inference Attack
 
-1. [Membership inference attacks against machine learning models](https://ieeexplore.ieee.org/abstract/document/7958568)
-1. [LOGAN: Membership inference attacks against generative models](https://content.sciendo.com/view/journals/popets/2019/1/article-p133.xml)
+1. [Membership inference attacks against machine learning models (IEEE S&P '17)](https://ieeexplore.ieee.org/abstract/document/7958568) :star:
+   * Target model--CNN, Fully Connected Neural Networks (Classifier)
+   * Dataset: CIFAR-10 and CIFAR-100, Purchases, Locations, MNIST, UCI Adult
+   * Approach: Multiple shadow models & a two-class attack model ("in"/"out"), black-box
+   * It seems that the target models built in this paper suffer from severe overfitting? :thinking:
+1. [LOGAN: Membership inference attacks against generative models (PETS '19)](https://content.sciendo.com/view/journals/popets/2019/1/article-p133.xml)
+   * Target model--Generative models: DCGAN, BEGAN, DCGAN+VAE
+   * Dataset: LFW, CIFAR-10, Diabetic Retinopathy (The simpler are the data, the hard is to launch attack.)
+   * Approach: Conduct attacks leveraging GAN models, black-box & white-box
+   * The first paper to investigate membership attacks against generative models.
 1. [Towards demystifying membership inference attacks](https://arxiv.org/abs/1807.09173)
 1. [Membership Inference Attack against Differentially Private Deep Learning Model](http://www.tdp.cat/issues16/tdp.a289a17.pdf)
 1. [Updates-Leak: Data Set Inference and Reconstruction Attacks in Online Learning](https://arxiv.org/abs/1904.01067)
-1. [Privacy Risk in Machine Learning: Analyzing the Connection to Overfitting](https://arxiv.org/abs/1709.01604)
+1. [Privacy Risk in Machine Learning: Analyzing the Connection to Overfitting (NSF '18)](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8429311)
 1. [Auditing Data Provenance in Text-Generation Models](https://arxiv.org/abs/1811.00513)
 1. [ML-Leaks: Model and Data Independent Membership Inference Attacks and Defenses on Machine Learning Models](https://arxiv.org/abs/1806.01246)
 1. [Comprehensive Privacy Analysis of Deep Learning: Stand-alone and Federated Learning under Passive and Active White-box Inference Attacks](https://arxiv.org/abs/1812.00910)
 1. [Machine Learning with Membership Privacy using Adversarial Regularization](https://arxiv.org/abs/1807.05852)
 1. [Understanding Membership Inferences on Well-Generalized Learning Models](https://arxiv.org/abs/1802.04889)
 1. [Towards Measuring Membership Privacy](https://arxiv.org/abs/1712.09136)
+   * This paper proposes an empirical metric _Differential Training Metric (DTP)_ to estimate the privacy risk. It seems that the idea comes from Shapley Value. Since the calculation of Shapley Value is impractical and inefficient, the authors use the pointwise DTP instead, that is, measuring the model difference with respect to record  $t$ by only one query $x^{(t)}$. 
 1. [Membership Encoding for Deep Learning](https://arxiv.org/abs/1909.12982)
 1. [Privacy Risks of Explaining Machine Learning Models](https://arxiv.org/abs/1907.00164)
+   * This paper investigates the possibility to exploit model explanations to condcut membership inference attacks.
+   * Model explanation method :one:: gradient-based attribution.
+   * Model explanation method :two:: record-based  influence measures. (Again, the Shapley Value :open_mouth:) -> The authors further exploits the record-based approach to run _reconstruction attacks_.
+   * Target model: CNN & FCN
+   * Dataset: Purchase, Texas hospital stays, CIFAR1-100, UCI, Disbetic Hospital
 1. [Ultimate Power of Inference Attacks: Privacy Risks of Learning High-Dimensional Graphical Models](https://arxiv.org/abs/1905.12774)
 1. [GAN-Leaks: A Taxonomy of Membership Inference Attacks against GANs](https://arxiv.org/abs/1909.03935)
 1. [Privacy Leakage Avoidance with Switching Ensembles](https://arxiv.org/abs/1911.07921)
@@ -339,6 +353,10 @@
 1. [Model Inversion Attacks Against Collaborative Inference](https://www.ntu.edu.sg/home/tianwei.zhang/paper/acsac19.pdf)
 1. [Characterizing Membership Privacy in Stochastic Gradient Langevin Dynamics](https://arxiv.org/pdf/1910.02249.pdf) :star:
 1. [Defending against Machine Learning based Inference Attacks via Adversarial Examples: Opportunities and Challenges](https://arxiv.org/abs/1909.08526)
+1. [Differential Privacy Has Disparate Impact on Model Accuracy (NurIPS 19)](http://www.cs.cornell.edu/~shmat/shmat_neurips19.pdf)
+   * Differentially private stochastic gradient descent (DP-SGD) could cause model accuracy to descrease unequally, i.e., making "the poor become poorer". 
+1. [White-box vs Black-box: Bayes Optimal Strategies for Membership Inference (ICML '19)](http://proceedings.mlr.press/v97/sablayrolles19a/sablayrolles19a.pdf)
+   * This paper shows the with some assumptions, the optimal attakcs depend on the __loss function__, and thus black-box attacks are as good as white-box attacks.
 
 
 ## 4.模型水印/后门
