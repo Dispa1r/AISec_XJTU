@@ -330,18 +330,19 @@
 1. [Privacy Risk in Machine Learning: Analyzing the Connection to Overfitting (NSF '18)](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8429311)
 1. [Auditing Data Provenance in Text-Generation Models](https://arxiv.org/abs/1811.00513)
 1. [ML-Leaks: Model and Data Independent Membership Inference Attacks and Defenses on Machine Learning Models](https://arxiv.org/abs/1806.01246)
+   * Shadow models work under weaker assumptions than those of [Shokri et al., IEEE S&P '17]. E.g., some one could achieve successful membership inference with only one shadow model, or in a transfer learning approach (using shadow models trained on dataset A to infer membership on dataset B).
 1. [Comprehensive Privacy Analysis of Deep Learning: Stand-alone and Federated Learning under Passive and Active White-box Inference Attacks](https://arxiv.org/abs/1812.00910)
 1. [Machine Learning with Membership Privacy using Adversarial Regularization](https://arxiv.org/abs/1807.05852)
 1. [Understanding Membership Inferences on Well-Generalized Learning Models](https://arxiv.org/abs/1802.04889)
 1. [Towards Measuring Membership Privacy](https://arxiv.org/abs/1712.09136)
-   * This paper proposes an empirical metric _Differential Training Metric (DTP)_ to estimate the privacy risk. It seems that the idea comes from Shapley Value. Since the calculation of Shapley Value is impractical and inefficient, the authors use the pointwise DTP instead, that is, measuring the model difference with respect to record  $t$ by only one query $x^{(t)}$. 
+    * This paper proposes an empirical metric _Differential Training Metric (DTP)_ to estimate the privacy risk. It seems that the idea comes from Shapley Value. Since the calculation of Shapley Value is impractical and inefficient, the authors use the pointwise DTP instead, that is, measuring the model difference with respect to record  $t$ by only one query $x^{(t)}$. 
 1. [Membership Encoding for Deep Learning](https://arxiv.org/abs/1909.12982)
 1. [Privacy Risks of Explaining Machine Learning Models](https://arxiv.org/abs/1907.00164)
-   * This paper investigates the possibility to exploit model explanations to condcut membership inference attacks.
-   * Model explanation method :one:: gradient-based attribution.
-   * Model explanation method :two:: record-based  influence measures. (Again, the Shapley Value :open_mouth:) -> The authors further exploits the record-based approach to run _reconstruction attacks_.
-   * Target model: CNN & FCN
-   * Dataset: Purchase, Texas hospital stays, CIFAR1-100, UCI, Disbetic Hospital
+    * This paper investigates the possibility to exploit model explanations to condcut membership inference attacks.
+    * Model explanation method :one:: gradient-based attribution.
+    * Model explanation method :two:: record-based  influence measures. (Again, the Shapley Value :open_mouth:) -> The authors further exploits the record-based approach to run _reconstruction attacks_.
+    * Target model: CNN & FCN
+    * Dataset: Purchase, Texas hospital stays, CIFAR1-100, UCI, Disbetic Hospital
 1. [Ultimate Power of Inference Attacks: Privacy Risks of Learning High-Dimensional Graphical Models](https://arxiv.org/abs/1905.12774)
 1. [GAN-Leaks: A Taxonomy of Membership Inference Attacks against GANs](https://arxiv.org/abs/1909.03935)
 1. [Privacy Leakage Avoidance with Switching Ensembles](https://arxiv.org/abs/1911.07921)
@@ -354,9 +355,10 @@
 1. [Characterizing Membership Privacy in Stochastic Gradient Langevin Dynamics](https://arxiv.org/pdf/1910.02249.pdf) :star:
 1. [Defending against Machine Learning based Inference Attacks via Adversarial Examples: Opportunities and Challenges](https://arxiv.org/abs/1909.08526)
 1. [Differential Privacy Has Disparate Impact on Model Accuracy (NurIPS 19)](http://www.cs.cornell.edu/~shmat/shmat_neurips19.pdf)
-   * Differentially private stochastic gradient descent (DP-SGD) could cause model accuracy to descrease unequally, i.e., making "the poor become poorer". 
+    * Differentially private stochastic gradient descent (DP-SGD) could cause model accuracy to descrease unequally, i.e., making "the poor become poorer". 
 1. [White-box vs Black-box: Bayes Optimal Strategies for Membership Inference (ICML '19)](http://proceedings.mlr.press/v97/sablayrolles19a/sablayrolles19a.pdf)
-   * This paper shows the with some assumptions, the optimal attakcs depend on the __loss function__, and thus black-box attacks are as good as white-box attacks.
+    * This paper shows the with some assumptions, the optimal attakcs depend on the __loss function__, and thus black-box attacks are as good as white-box attacks.
+    * :exclamation:"<u>White-box attacks don't provide any additional information</u> and result in the same optimal strategy." (Page 2) 
 
 
 ## 4.模型水印/后门
@@ -550,7 +552,7 @@ __基于软键盘/虚拟键盘__
 1. [Touch-interaction behavior for continuous user authentication on smartphones](https://ieeexplore.ieee.org/abstract/document/7139046)
 
 1. [TouchIn: Sightless two-factor authentication on multi-touch mobile devices](https://ieeexplore.ieee.org/document/6997513)
-  
+
 
 ### Motion Sensor
 ### Touchscreen
