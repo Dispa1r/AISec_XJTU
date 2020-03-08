@@ -359,13 +359,12 @@
 1. [White-box vs Black-box: Bayes Optimal Strategies for Membership Inference (ICML '19)](http://proceedings.mlr.press/v97/sablayrolles19a/sablayrolles19a.pdf)
     * This paper shows the with some assumptions, the optimal attakcs depend on the __loss function__, and thus black-box attacks are as good as white-box attacks.
     * :exclamation:"<u>White-box attacks don't provide any additional information</u> and result in the same optimal strategy." (Page 2) 
-* [Privacy for All: Demystify Vulnerability Disparity of Differential Privacy against Membership Inference Aack](https://arxiv.org/pdf/2001.08855.pdf)
-* [Modelling and Quantifying Membership Information Leakage in Machine Learning](https://arxiv.org/pdf/2001.10648.pdf)
-* [Data and Model Dependencies of Membership Inference Attack](https://arxiv.org/pdf/2002.06856.pdf)
-* [A Methodology for Formalizing Model-Inversion Attacks](https://www.cs.cmu.edu/~mfredrik/papers/wfjn_csf16.pdf)
-* [Stolen Memories: Leveraging Model Memorization for Calibrated White-Box Membership Inference](https://arxiv.org/pdf/1906.11798.pdf)
-* 
+1. [Privacy for All: Demystify Vulnerability Disparity of Differential Privacy against Membership Inference Aack](https://arxiv.org/pdf/2001.08855.pdf)
 
+1. [Modelling and Quantifying Membership Information Leakage in Machine Learning](https://arxiv.org/pdf/2001.10648.pdf)
+1. [Data and Model Dependencies of Membership Inference Attack](https://arxiv.org/pdf/2002.06856.pdf)
+1. [A Methodology for Formalizing Model-Inversion Attacks](https://www.cs.cmu.edu/~mfredrik/papers/wfjn_csf16.pdf)
+1. [Stolen Memories: Leveraging Model Memorization for Calibrated White-Box Membership Inference](https://arxiv.org/pdf/1906.11798.pdf)
 
 ## 4.模型水印/后门
 
